@@ -63,7 +63,7 @@ vpath %.hpp $(HDRDIR)
 vpath %.cpp $(SRCDIR)
 
 CC = g++
-CXXFLAGS = -Wall -Wextra -Weffc++ -Wno-missing-braces -std=c++11 -DQUANTITY_USE_KELVIN -I$(INCDIR)
+CXXFLAGS = -Wall -Wextra -Weffc++ -Wno-missing-braces -std=c++11 -DQUANTITY_USE_KELVIN  -DPHYS_UNITS_COLLAPSE_TO_REP=1 -I$(INCDIR)
 
 %.o: %.cpp $(HEADERS)
 
