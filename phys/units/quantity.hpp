@@ -114,7 +114,7 @@ struct collapse
     typedef quantity< D, T > type;
 };
 
-#if defined( PHYS_UNITS_COLLAPSE_TO_REP )
+#if PHYS_UNITS_COLLAPSE_TO_REP
 
 template< typename T >
 struct collapse< dimensionless_d, T >
@@ -350,7 +350,7 @@ private:
 
     enum { has_dimension = ! Dims::is_all_zero };
 
-#if defined( PHYS_UNITS_COLLAPSE_TO_REP )
+#if PHYS_UNITS_COLLAPSE_TO_REP
     static_assert( has_dimension, "quantity dimensions must not all be zero" );
 #endif
 
